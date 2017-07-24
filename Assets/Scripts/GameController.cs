@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Vuforia;
 
 public class GameController : MonoBehaviour {
 
@@ -43,6 +44,7 @@ public class GameController : MonoBehaviour {
 	void Start(){
 //		gameController = gameControllerObject.GetComponent<GameController> ();
 		flipper = GetComponent<AudioSource> ();
+		CameraDevice.Instance.SetFocusMode (CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 	}
 
 	public void AddScore(int plusScore){
